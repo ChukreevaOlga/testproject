@@ -35,16 +35,3 @@ let conf = {
 };
 
 module.exports = conf;
-
-if (params.env == 'production') {
-    
-    module.exports.plugins.push(
-        new plugins.jsOptimize()
-    );
-    
-    module.exports.plugins.push(
-        new plugins.cssOptimize({
-            cssProcessor: require('cssnano'),
-        })
-    );
-}
